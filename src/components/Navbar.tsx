@@ -21,6 +21,10 @@ const Navbar = () => {
     { href: "#about", label: "Sobre Mim" },
     { href: "#projects", label: "Projetos" },
     { href: "#skills", label: "Habilidades" },
+    //
+    // ADICIONA A NOVA LINHA AQUI:
+    { href: "#automation", label: "Automação" },
+    //
     { href: "#contact", label: "Contato" },
   ];
 
@@ -73,7 +77,9 @@ const Navbar = () => {
             }`}
           >
             <svg
-              className={`w-6 h-6 transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+              className={`w-6 h-6 transition-transform duration-300 ${
+                isOpen ? "rotate-90" : ""
+              }`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

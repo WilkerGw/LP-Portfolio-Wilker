@@ -1,9 +1,12 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Script from "next/script"; // 1. IMPORTAÇÃO ADICIONADA
+import Script from "next/script";
+// 1. Importamos o nosso novo ChatLoader
+import ChatLoader from "@/components/ChatLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +28,10 @@ export default function RootLayout({
         <Navbar />
         <main className="pt-16">{children}</main>
         <Footer />
+        {/* 2. Usamos o ChatLoader aqui em vez do AiChat diretamente */}
+        <ChatLoader />
 
-        {/* 2. TAGS DO GOOGLE ADICIONADAS */}
+        {/* Tags do Google (sem alterações) */}
         <Script
           strategy="afterInteractive"
           async
