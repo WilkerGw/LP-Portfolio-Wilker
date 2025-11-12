@@ -23,78 +23,108 @@ const projectsData = [
     liveUrl: "https://oticasvizz.lojavirtualnuvem.com.br/",
     featured: false,
   },
-    {
-  title: "Site Institucional Óticas Vizz",
-  description: "Desenvolvimento do site institucional para uma ótica, utilizando Next.js para alta performance. O projeto inclui um chatbot com a IA Gemini do Google, sistema de agendamento de exames e um design moderno com animações em Framer Motion.",
-  imageUrl: "/images/projects/vizz-site.png", // Verifique se esta imagem existe no seu projeto de portfólio
-  tags: ["Next.js", "TypeScript", "Tailwind CSS", "Google Gemini", "Framer Motion"],
-  liveUrl: "https://www.oticasvizz.com.br/", // Substitua pela URL real
-  featured: false, // Ou false, dependendo da sua preferência
-},
-{
-  title: "Mind ERP - Sistema de Gestão para Óticas",
-  description: "Um sistema ERP full-stack completo para gestão de óticas. O backend foi construído com Node.js, Express e Prisma, e o frontend com Next.js e Tailwind CSS. Inclui módulos de vendas, stock, clientes, ordens de serviço e dashboard com relatórios.",
-  imageUrl: "/images/projects/erp-mind.png", // Imagem que você já tem no seu portfólio!
-  tags: ["Next.js", "Node.js", "TypeScript", "Prisma", "Tailwind CSS", "Zustand"],
-  liveUrl: "#", // Projeto local/privado
-  repoUrl: "#",
-  featured: false, // Ou true, se quiser destacá-lo
-},
-{
-  title: "Landing Page 'Nice Clothes'",
-  description: "Uma landing page visualmente atraente para uma marca de vestuário desportivo, focada na apresentação de produtos com animações modernas. Desenvolvida com Next.js, Tailwind CSS e Framer Motion para uma experiência de utilizador fluida e responsiva.",
-  imageUrl: "/images/projects/nice-clothes.png", // Esta imagem já existe no seu portfólio
-  tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-  liveUrl: "https://nice-clothes.vercel.app/", // Substitua pela URL real, se houver
-  repoUrl: "https://github.com/WilkerGw/Nice-Clothes",
-  featured: false, 
-},
-{
-  title: "Lading Page Loja Esportiva",
-  description: "Frontend de uma LP de loja esportiva construído com Next.js e TypeScript. O projeto utiliza CSS Modules para estilização e Context API para gestão do carrinho de compras. Inclui listagem de produtos por categoria, pesquisa e páginas de detalhe.",
-  imageUrl: "/images/projects/sneakers.png", // Esta imagem já existe no seu portfólio
-  tags: ["Next.js", "TypeScript", "CSS Modules", "React Context", "Docker"],
-  liveUrl: "https://loja-de-tenis-525s.vercel.app/", // Projeto local/privado
-  repoUrl: "https://github.com/WilkerGw/loja-de-tenis",
-  featured: false,
-},
-{
-  title: "Site para Imobiliária",
-  description: "Uma landing page elegante para uma imobiliária, construída com Next.js e CSS Modules. O projeto foca na experiência do utilizador com funcionalidades de pesquisa de imóveis, navegação inteligente com scroll spy e um design limpo e responsivo.",
-  imageUrl: "/images/projects/imobiliaria.png", // Esta imagem já existe no seu portfólio
-  tags: ["Next.js", "React", "JavaScript", "CSS Modules"],
-  liveUrl:  "https://imobiliaria-site-seven.vercel.app/", // Projeto local/privado
-  repoUrl: "https://github.com/WilkerGw/Imobiliaria-site",
-  featured: false,
-},
-{
-  title: "Landing Page 'Espaço Integrado'",
-  description: "Uma landing page de página única para um centro de bem-estar. O projeto foi desenvolvido com Next.js e Framer Motion para criar uma experiência de navegação suave e apresentar os serviços e planos de forma clara e profissional.",
-  imageUrl: "/images/projects/espaco-terapia.png", // Crie uma imagem de prévia para este projeto
-  tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-  liveUrl: "https://lp-espaco-integrado.vercel.app/", // Projeto local/privado
-  repoUrl:  "#",
-  featured: false,
-},
-{
-  title: "Landing Page 'Aurum'",
-  description: "Uma landing page para o Aurum, uma plataforma de audiolearning, desenvolvida com as tecnologias mais modernas para criar uma experiência de usuário rápida e responsiva. O projeto apresenta a proposta de valor da plataforma, seus benefícios, conteúdos e planos de assinatura com o objetivo de converter visitantes em assinantes.",
-  imageUrl: "/images/projects/aurum.png", // Crie uma imagem de prévia para este projeto
-  tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-  liveUrl: "https://lp-aurum.vercel.app/", // Projeto local/privado
-  repoUrl:  "https://github.com/WilkerGw/LP-Aurum",
-  featured: false,
-},
-{
-  title: "Landing Page 'NeuroFlow Coffee'",
-  description:
-    "Desenvolvimento de uma landing page de alta conversão para o 'NeuroFlow Coffee', um produto de café nootrópico. O projeto foi construído para apresentar de forma persuasiva os benefícios de foco e energia limpa do produto, incluindo depoimentos, FAQ e uma oferta especial de lançamento com garantia de satisfação.",
-  imageUrl: "/images/projects/neuro-coffee.png", // Sugestão: Crie uma imagem de prévia para este projeto
-  tags: ["Next.js", "TypeScript", "Tailwind CSS"], // Presumindo que você usou estas tecnologias
-  liveUrl: "https://lp-neuro-flow-coffee.vercel.app/",
-  repoUrl: "https://github.com/WilkerGw/LP-Neuro-Flow-Coffee", // Se o repositório for privado, mantenha "#"
-  featured: false,
-},
+  {
+    title: "Removedor de Fundo com IA",
+    description:
+      "Uma aplicação web construída com Python e Gradio que usa IA (Rembg) para remover fundos de imagens automaticamente. Suporta processamento em lote (múltiplas imagens) através de uma interface 'arrastar e soltar' (drag-and-drop).",
+    imageUrl: "/images/projects/removedor-fundo.png", // ATENÇÃO: Crie um screenshot do seu app e salve aqui
+    tags: ["Python", "Gradio", "Rembg", "Pillow"],
+    liveUrl: null, // O app corre localmente, não está num site público
+    repoUrl: "https://github.com/WilkerGw/removedor-fundo-ia", // URL sugestiva para o seu novo repositório
+    featured: true,
+  },
+  {
+    title: "Site Institucional Óticas Vizz",
+    description:
+      "Desenvolvimento do site institucional para uma ótica, utilizando Next.js para alta performance. O projeto inclui um chatbot com a IA Gemini do Google, sistema de agendamento de exames e um design moderno com animações em Framer Motion.",
+    imageUrl: "/images/projects/vizz-site.png", // Verifique se esta imagem existe no seu projeto de portfólio
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Gemini",
+      "Framer Motion",
+    ],
+    liveUrl: "https://www.oticasvizz.com.br/", // Substitua pela URL real
+    featured: false, // Ou false, dependendo da sua preferência
+  },
+  {
+    title: "Mind ERP - Sistema de Gestão para Óticas",
+    description:
+      "Um sistema ERP full-stack completo para gestão de óticas. O backend foi construído com Node.js, Express e Prisma, e o frontend com Next.js e Tailwind CSS. Inclui módulos de vendas, stock, clientes, ordens de serviço e dashboard com relatórios.",
+    imageUrl: "/images/projects/erp-mind.png", // Imagem que você já tem no seu portfólio!
+    tags: [
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Prisma",
+      "Tailwind CSS",
+      "Zustand",
+    ],
+    liveUrl: "#", // Projeto local/privado
+    repoUrl: "#",
+    featured: false, // Ou true, se quiser destacá-lo
+  },
+  {
+    title: "Landing Page 'Nice Clothes'",
+    description:
+      "Uma landing page visualmente atraente para uma marca de vestuário desportivo, focada na apresentação de produtos com animações modernas. Desenvolvida com Next.js, Tailwind CSS e Framer Motion para uma experiência de utilizador fluida e responsiva.",
+    imageUrl: "/images/projects/nice-clothes.png", // Esta imagem já existe no seu portfólio
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://nice-clothes.vercel.app/", // Substitua pela URL real, se houver
+    repoUrl: "https://github.com/WilkerGw/Nice-Clothes",
+    featured: false,
+  },
+  {
+    title: "Lading Page Loja Esportiva",
+    description:
+      "Frontend de uma LP de loja esportiva construído com Next.js e TypeScript. O projeto utiliza CSS Modules para estilização e Context API para gestão do carrinho de compras. Inclui listagem de produtos por categoria, pesquisa e páginas de detalhe.",
+    imageUrl: "/images/projects/sneakers.png", // Esta imagem já existe no seu portfólio
+    tags: ["Next.js", "TypeScript", "CSS Modules", "React Context", "Docker"],
+    liveUrl: "https://loja-de-tenis-525s.vercel.app/", // Projeto local/privado
+    repoUrl: "https://github.com/WilkerGw/loja-de-tenis",
+    featured: false,
+  },
+  {
+    title: "Site para Imobiliária",
+    description:
+      "Uma landing page elegante para uma imobiliária, construída com Next.js e CSS Modules. O projeto foca na experiência do utilizador com funcionalidades de pesquisa de imóveis, navegação inteligente com scroll spy e um design limpo e responsivo.",
+    imageUrl: "/images/projects/imobiliaria.png", // Esta imagem já existe no seu portfólio
+    tags: ["Next.js", "React", "JavaScript", "CSS Modules"],
+    liveUrl: "https://imobiliaria-site-seven.vercel.app/", // Projeto local/privado
+    repoUrl: "https://github.com/WilkerGw/Imobiliaria-site",
+    featured: false,
+  },
+  {
+    title: "Landing Page 'Espaço Integrado'",
+    description:
+      "Uma landing page de página única para um centro de bem-estar. O projeto foi desenvolvido com Next.js e Framer Motion para criar uma experiência de navegação suave e apresentar os serviços e planos de forma clara e profissional.",
+    imageUrl: "/images/projects/espaco-terapia.png", // Crie uma imagem de prévia para este projeto
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://lp-espaco-integrado.vercel.app/", // Projeto local/privado
+    repoUrl: "#",
+    featured: false,
+  },
+  {
+    title: "Landing Page 'Aurum'",
+    description:
+      "Uma landing page para o Aurum, uma plataforma de audiolearning, desenvolvida com as tecnologias mais modernas para criar uma experiência de usuário rápida e responsiva. O projeto apresenta a proposta de valor da plataforma, seus benefícios, conteúdos e planos de assinatura com o objetivo de converter visitantes em assinantes.",
+    imageUrl: "/images/projects/aurum.png", // Crie uma imagem de prévia para este projeto
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://lp-aurum.vercel.app/", // Projeto local/privado
+    repoUrl: "https://github.com/WilkerGw/LP-Aurum",
+    featured: false,
+  },
+  {
+    title: "Landing Page 'NeuroFlow Coffee'",
+    description:
+      "Desenvolvimento de uma landing page de alta conversão para o 'NeuroFlow Coffee', um produto de café nootrópico. O projeto foi construído para apresentar de forma persuasiva os benefícios de foco e energia limpa do produto, incluindo depoimentos, FAQ e uma oferta especial de lançamento com garantia de satisfação.",
+    imageUrl: "/images/projects/neuro-coffee.png", // Sugestão: Crie uma imagem de prévia para este projeto
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"], // Presumindo que você usou estas tecnologias
+    liveUrl: "https://lp-neuro-flow-coffee.vercel.app/",
+    repoUrl: "https://github.com/WilkerGw/LP-Neuro-Flow-Coffee", // Se o repositório for privado, mantenha "#"
+    featured: false,
+  },
 ];
 
 const Projects = () => {
