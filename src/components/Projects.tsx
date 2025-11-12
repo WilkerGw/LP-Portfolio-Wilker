@@ -182,22 +182,35 @@ const Projects = () => {
                             </span>
                           ))}
                         </div>
+
+                        {/* INÍCIO DA CORREÇÃO:
+                          Adicionadas verificações {project.liveUrl && ...} e {project.repoUrl && ...}
+                          para renderizar os botões apenas se as URLs existirem (não forem null).
+                        */}
                         <div className="flex flex-col lg:flex-row gap-4 text-center">
-                          <a
-                            href={project.liveUrl}
-                            className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-800 text-white font-bold rounded-xl hover:scale-105 transition-transform duration-300"
-                            target="_blank"
-                          >
-                            Ver Projeto
-                          </a>
-                          <a
-                            href={project.repoUrl}
-                            className="px-6 py-3 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-                            target="_blank"
-                          >
-                            Código Fonte
-                          </a>
+                          {project.liveUrl && (
+                            <a
+                              href={project.liveUrl}
+                              className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-800 text-white font-bold rounded-xl hover:scale-105 transition-transform duration-300"
+                              target="_blank"
+                              rel="noopener noreferrer" // Boa prática
+                            >
+                              Ver Projeto
+                            </a>
+                          )}
+                          {project.repoUrl && (
+                            <a
+                              href={project.repoUrl}
+                              className="px-6 py-3 bg-white/10 text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
+                              target="_blank"
+                              rel="noopener noreferrer" // Boa prática
+                            >
+                              Código Fonte
+                            </a>
+                          )}
                         </div>
+                        {/* FIM DA CORREÇÃO */}
+
                       </div>
                       {/* 2. CÓDIGO DA IMAGEM ATUALIZADO */}
                       <div className="relative aspect-video overflow-hidden transition-all duration-300">
@@ -231,8 +244,8 @@ const Projects = () => {
                   description={project.description}
                   imageUrl={project.imageUrl}
                   tags={project.tags}
-                  liveUrl={project.liveUrl}
-                  repoUrl={project.repoUrl}
+                  liveUrl={project.liveUrl || undefined} // Passa undefined se for null
+                  repoUrl={project.repoUrl || undefined} // Passa undefined se for null
                 />
               ))}
           </div>
