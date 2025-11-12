@@ -37,7 +37,9 @@ const Automation = () => {
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
                 {/* Texto Provisório (podes alterar) */}
-                O N8N é uma ferramenta "low-code" de automação de fluxos de
+                {/* CORREÇÃO AQUI: Trocámos "low-code" por 'low-code'
+                */}
+                O N8N é uma ferramenta 'low-code' de automação de fluxos de
                 trabalho. Permite-me conectar diferentes aplicações e serviços
                 (APIs, bancos de dados, e-mails) para criar processos
                 automáticos de forma visual e eficiente.
@@ -79,8 +81,10 @@ const Automation = () => {
               </h4>
               <p className="text-gray-600">
                 {/* Texto Provisório (podes alterar) */}
+                {/* CORREÇÃO AQUI: Trocámos "conversem" por 'conversem'
+                */}
                 Conecto APIs de serviços distintos (Google, CRMs, E-mail) para
-                que "conversem" entre si.
+                que 'conversem' entre si.
               </p>
             </div>
             {/* Card 3 */}
