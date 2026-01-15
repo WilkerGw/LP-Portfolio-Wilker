@@ -22,8 +22,15 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log("Form submitted:", formData);
+
+    const { name, email, message } = formData;
+
+    const text = `*Novo Contato via Site*\n\n*Nome:* ${name}\n*Email:* ${email}\n*Mensagem:* ${message}`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/5534993210534?text=${encodedText}`;
+
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
