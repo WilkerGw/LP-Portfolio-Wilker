@@ -9,7 +9,7 @@ const projectsData = [
     title: "Meu Portfólio",
     description:
       "O site que você está vendo agora, construído com as tecnologias mais modernas para web. Design responsivo e animações fluidas.",
-    imageUrl: "/images/projects/portfolio.webp",
+    imageUrl: "/images/portfolio.webp",
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://portfolio-front-tau-flax.vercel.app/",
     repoUrl: "https://github.com/WilkerGw/Portfolio-Wilker",
@@ -19,7 +19,7 @@ const projectsData = [
     title: "E-commerce Loja de Óculos",
     description:
       "Uma loja virtual completa para o ramo de óticas, com um catálogo de produtos detalhado, carrinho de compras e um checkout seguro com diversas opções de pagamento.",
-    imageUrl: "/images/projects/vizz-loja-virtual.webp",
+    imageUrl: "/images/vizz-loja-virtual.webp",
     tags: ["NuvemShop"],
     liveUrl: "https://oticasvizz.lojavirtualnuvem.com.br/",
     featured: false,
@@ -28,7 +28,7 @@ const projectsData = [
     title: "Removedor de Fundo com IA",
     description:
       "Uma aplicação web construída com Python e Gradio que usa IA (Rembg) para remover fundos de imagens automaticamente. Suporta processamento em lote.",
-    imageUrl: "/images/projects/removedor-fundo.webp",
+    imageUrl: "/images/removedor-fundo.webp",
     tags: ["Python", "Gradio", "Rembg", "Pillow"],
     liveUrl: null,
     repoUrl: "https://github.com/WilkerGw/removedor-fundo-ia",
@@ -38,7 +38,7 @@ const projectsData = [
     title: "Site Institucional Óticas Vizz",
     description:
       "Desenvolvimento do site institucional para uma ótica, utilizando Next.js para alta performance. O projeto inclui um chatbot com a IA Gemini do Google.",
-    imageUrl: "/images/projects/vizz-site.webp",
+    imageUrl: "/images/vizz-site.webp",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Google Gemini"],
     liveUrl: "https://www.oticasvizz.com.br/",
     featured: false,
@@ -47,7 +47,7 @@ const projectsData = [
     title: "Mind ERP - Sistema de Gestão",
     description:
       "Um sistema ERP full-stack completo para gestão de óticas. O backend foi construído com Node.js, Express e Prisma, e o frontend com Next.js.",
-    imageUrl: "/images/projects/mind-erp.webp",
+    imageUrl: "/images/mind-erp.webp",
     tags: ["Next.js", "Node.js", "TypeScript", "Prisma", "Tailwind CSS"],
     liveUrl: "#",
     repoUrl: "#",
@@ -57,7 +57,7 @@ const projectsData = [
     title: "Landing Page 'Nice Clothes'",
     description:
       "Uma landing page visualmente atraente para uma marca de vestuário desportivo, focada na apresentação de produtos com animações modernas.",
-    imageUrl: "/images/projects/nice-clothes.webp",
+    imageUrl: "/images/nice-clothes.webp",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://nice-clothes.vercel.app/",
     repoUrl: "https://github.com/WilkerGw/Nice-Clothes",
@@ -67,7 +67,7 @@ const projectsData = [
     title: "Lading Page Loja Esportiva",
     description:
       "Frontend de uma LP de loja esportiva construído com Next.js e TypeScript. O projeto utiliza CSS Modules para estilização.",
-    imageUrl: "/images/projects/sneaker.webp",
+    imageUrl: "/images/sneaker.webp",
     tags: ["Next.js", "TypeScript", "CSS Modules", "React Context"],
     liveUrl: "https://loja-de-tenis-525s.vercel.app/",
     repoUrl: "https://github.com/WilkerGw/loja-de-tenis",
@@ -77,7 +77,7 @@ const projectsData = [
     title: "Site para Imobiliária",
     description:
       "Uma landing page elegante para uma imobiliária, construída com Next.js e CSS Modules. O projeto foca na experiência do utilizador.",
-    imageUrl: "/images/projects/imobiliaria.webp",
+    imageUrl: "/images/imobiliaria.webp",
     tags: ["Next.js", "React", "JavaScript", "CSS Modules"],
     liveUrl: "https://imobiliaria-site-seven.vercel.app/",
     repoUrl: "https://github.com/WilkerGw/Imobiliaria-site",
@@ -87,7 +87,7 @@ const projectsData = [
     title: "Landing Page 'Espaço Integrado'",
     description:
       "Uma landing page de página única para um centro de bem-estar. O projeto foi desenvolvido com Next.js e Framer Motion.",
-    imageUrl: "/images/projects/espaco-terapia.webp",
+    imageUrl: "/images/espaco-terapia.webp",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://lp-espaco-integrado.vercel.app/",
     repoUrl: "#",
@@ -97,7 +97,7 @@ const projectsData = [
     title: "Landing Page 'Aurum'",
     description:
       "Uma landing page para o Aurum, uma plataforma de audiolearning, desenvolvida com as tecnologias mais modernas.",
-    imageUrl: "/images/projects/aurum.webp",
+    imageUrl: "/images/aurum.webp",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     liveUrl: "https://lp-aurum.vercel.app/",
     repoUrl: "https://github.com/WilkerGw/LP-Aurum",
@@ -107,7 +107,7 @@ const projectsData = [
     title: "Landing Page 'NeuroFlow Coffee'",
     description:
       "Desenvolvimento de uma landing page de alta conversão para o 'NeuroFlow Coffee', um produto de café nootrópico.",
-    imageUrl: "/images/projects/neuro-coffee.webp",
+    imageUrl: "/images/neuro-coffee.webp",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://lp-neuro-flow-coffee.vercel.app/",
     repoUrl: "https://github.com/WilkerGw/LP-Neuro-Flow-Coffee",
@@ -122,8 +122,9 @@ const Projects = () => {
       className="relative py-16 md:py-24 bg-dark overflow-hidden"
     >
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[120px] -z-10" />
-      <div className="absolute bottom-0 left-0 w-1/3 h-full bg-secondary/5 blur-[120px] -z-10" />
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-1/3 h-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-full -z-10" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -133,7 +134,7 @@ const Projects = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
-            Projetos em <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Destaque</span>
+            Projetos Web em <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Destaque</span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -196,7 +197,7 @@ const Projects = () => {
                   </div>
 
                   <div className="relative aspect-video lg:aspect-auto bg-dark-lighter overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-surface/50 to-transparent z-10" />
+                    <div className="absolute inset-0 z-10" />
                     <Image
                       src={project.imageUrl}
                       alt={project.title}

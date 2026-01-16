@@ -39,8 +39,9 @@ const Contact = () => {
       className="relative py-16 md:py-24 bg-dark overflow-hidden"
     >
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-[120px] -z-10" />
-      <div className="absolute bottom-0 left-0 w-1/2 h-full bg-secondary/5 blur-[120px] -z-10" />
+      {/* Background Elements */}
+      <div className="absolute top-0 right-0 w-1/2 h-full -z-10" />
+      <div className="absolute bottom-0 left-0 w-1/2 h-full -z-10" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -53,9 +54,6 @@ const Contact = () => {
             Vamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Conversar?</span>
           </h2>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Tem uma ideia inovadora ou quer transformar seu negócio? Estou pronto para ajudar você a alcançar seus objetivos.
-          </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
@@ -63,7 +61,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="bg-dark-surface border border-white/5 rounded-3xl p-8 lg:p-10 relative overflow-hidden group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <h3 className="text-2xl font-bold text-white mb-6 relative z-10">
                   Informações de Contato

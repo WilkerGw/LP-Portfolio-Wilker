@@ -19,7 +19,6 @@ import {
   SiMongodb,
   SiPostgresql,
   SiMysql,
-  SiDjango,
   SiGimp,
   SiCanva,
 } from "react-icons/si";
@@ -36,7 +35,6 @@ const iconMap: { [key: string]: React.ReactElement } = {
   "Node.js": <FaNodeJs title="Node.js" />,
   Express: <SiExpress title="Express" />,
   Python: <FaPython title="Python" />,
-  Django: <SiDjango title="Django" />,
   MongoDB: <SiMongodb title="MongoDB" />,
   PostgreSQL: <SiPostgresql title="PostgreSQL" />,
   MySQL: <SiMysql title="MySQL" />,
@@ -62,7 +60,7 @@ const skillsData = [
   },
   {
     category: "Backend",
-    technologies: ["Node.js", "Express", "Python", "Django"],
+    technologies: ["Node.js", "Express", "Python"],
   },
   {
     category: "Bancos de Dados",
@@ -81,8 +79,9 @@ const Skills = () => {
       className="relative py-16 md:py-24 bg-dark overflow-hidden"
     >
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10" />
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-px" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] -z-10" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -125,7 +124,7 @@ const Skills = () => {
                     <div className="relative w-12 h-12 flex items-center justify-center text-3xl text-gray-500 group-hover/tech:text-primary transition-all duration-300 group-hover/tech:scale-110 mb-3">
                       <div className="absolute inset-0 bg-primary/10 rounded-xl opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300" />
                       {iconMap[tech] || (
-                        <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-green-700 rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center">
                           <span className="text-white text-xs font-bold">
                             {tech.charAt(0)}
                           </span>
@@ -154,7 +153,7 @@ const Skills = () => {
               web.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Clean Code", "SOLID", "TDD", "UI/UX Design", "SEO", "Performance"].map((item, i) => (
+              {["UI/UX Design", "SEO", "Performance"].map((item, i) => (
                 <span key={i} className="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-sm rounded-lg border border-white/10 transition-colors cursor-default">
                   {item}
                 </span>

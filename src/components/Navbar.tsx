@@ -17,10 +17,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { href: "#about", label: "Sobre" },
     { href: "#projects", label: "Projetos" },
     { href: "#skills", label: "Skills" },
     { href: "#automation", label: "Automação" },
+    { href: "#whatsapp-automation", label: "WhatsApp" },
     { href: "#contact", label: "Contato" },
   ];
 

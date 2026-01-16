@@ -7,7 +7,6 @@ import {
   FaReact,
   FaNodeJs,
   FaGitAlt,
-  FaDocker,
   FaPython,
 } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiNextdotjs } from "react-icons/si";
@@ -23,7 +22,6 @@ const skillsIcons = [
   { icon: <FaNodeJs />, name: "Node.js" },
   { icon: <FaPython />, name: "Python" },
   { icon: <FaGitAlt />, name: "Git" },
-  { icon: <FaDocker />, name: "Docker" },
 ];
 
 const SkillsCarousel = () => {

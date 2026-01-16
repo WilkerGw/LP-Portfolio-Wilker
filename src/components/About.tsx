@@ -8,16 +8,17 @@ const About = () => {
       className="relative py-16 md:py-24 bg-dark overflow-hidden"
     >
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-      <div className="absolute top-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-secondary/5 rounded-full blur-[100px]" />
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-px" />
+      <div className="absolute top-20 right-10 w-96 h-96 rounded-full blur-[100px]" />
+      <div className="absolute bottom-20 left-10 w-72 h-72 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 
           {/* Image/Visual Side */}
           <div className="w-full lg:w-1/2 relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500" />
+            <div className="absolute inset-0 rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500" />
             <div className="relative aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 border-2 border-white/10 rounded-2xl transform rotate-6 transition-transform duration-500 group-hover:rotate-12" />
               <div className="absolute inset-0 border-2 border-primary/20 rounded-2xl transform -rotate-6 transition-transform duration-500 group-hover:-rotate-12" />

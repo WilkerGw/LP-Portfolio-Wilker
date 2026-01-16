@@ -2,15 +2,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 import SkillsCarousel from "./SkillsCarousel";
 
 const Hero = () => {
   return (
     <section className="relative flex items-center py-24 md:py-32 lg:min-h-screen overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(16,185,129,0.05),transparent_50%)]" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute inset-0" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full translate-y-1/2 -translate-x-1/2" />
 
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -28,14 +29,14 @@ const Hero = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 animate-slide-up">
-              Transformando <br />
+              Wilker Martins <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient">
-                Ideias em Código
+                Desenvolvedor Web
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-slide-up delay-200">
-              Desenvolvedor Full Stack & Especialista em Automação.
+              Desenvolvedor Web & Especialista em criação de conteúdo com IA.
               Crio soluções digitais escaláveis que impulsionam negócios e otimizam processos.
             </p>
 
@@ -48,7 +49,7 @@ const Hero = () => {
               </Link>
 
               <Link
-                href="#projects"
+                href="#ai-showcase"
                 className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all hover:scale-105 w-full sm:w-auto flex items-center justify-center gap-2"
               >
                 Ver Portfólio
@@ -59,7 +60,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="mt-12 flex items-center justify-center lg:justify-start gap-6 animate-fade-in delay-500">
+            <div className="mb-10 mt-5 flex items-center justify-center lg:justify-start gap-6 animate-fade-in delay-500">
               {[
                 { icon: "github", href: "https://github.com/WilkerGw", label: "GitHub" },
                 { icon: "linkedin", href: "https://www.linkedin.com/in/wilker-martins-22238a370/", label: "LinkedIn" },
@@ -87,53 +88,16 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Visual Content */}
-          <div className="flex-1 relative w-full max-w-lg lg:max-w-xl animate-float">
-            <div className="relative aspect-square">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full opacity-20 blur-3xl animate-pulse-slow" />
-              <div className="relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/10 backdrop-blur-sm bg-white/5 p-4">
-                <Image
-                  src="/images/wilker.png"
-                  alt="Wilker Martins"
-                  fill
-                  className="object-cover rounded-2xl"
-                  priority
-                />
-              </div>
 
-              {/* Floating Cards */}
-              <div className="absolute -left-8 top-1/4 p-4 bg-dark-surface/90 backdrop-blur-md border border-white/10 rounded-xl shadow-xl animate-float delay-100 hidden sm:block">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400">Automação</p>
-                    <p className="font-bold text-white">n8n Expert</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="absolute -right-8 bottom-1/4 p-4 bg-dark-surface/90 backdrop-blur-md border border-white/10 rounded-xl shadow-xl animate-float delay-300 hidden sm:block">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400">Full Stack</p>
-                    <p className="font-bold text-white">React & Next.js</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Bottom Carousel */}
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-dark to-transparent pt-20 pb-8">
+      <div className="absolute bottom-0 left-0 w-full pt-20 pb-8">
         <SkillsCarousel />
       </div>
+
+
     </section>
   );
 };
