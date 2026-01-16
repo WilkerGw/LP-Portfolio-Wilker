@@ -164,7 +164,7 @@ const AIShowcase = () => {
   );
 
   return (
-    <section id="ai-showcase" className="py-24 bg-black text-white relative overflow-hidden" id="ai-showcase">
+    <section id="ai-showcase" className="py-24 bg-black text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute top-[10%] left-[10%] w-96 h-96 rounded-full blur-3xl opacity-50"></div>
