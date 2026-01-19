@@ -16,6 +16,16 @@ const projectsData = [
     featured: true,
   },
   {
+    title: "Elevva Imobiliária",
+    description:
+      "Uma solução digital moderna para o mercado imobiliário, focada na apresentação elegante de imóveis e na facilidade de contato.",
+    imageUrl: "/images/elevva-imobiliaria.webp",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://lp-elevva-imoboliaria-egwb14q70-wilkergws-projects.vercel.app/",
+    repoUrl: "https://lp-elevva-imoboliaria-egwb14q70-wilkergws-projects.vercel.app/",
+    featured: false,
+  },
+  {
     title: "E-commerce Loja de Óculos",
     description:
       "Uma loja virtual completa para o ramo de óticas, com um catálogo de produtos detalhado, carrinho de compras e um checkout seguro com diversas opções de pagamento.",
