@@ -85,7 +85,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link
-                href="https://wa.me/5561992592289"
+                href="https://wa.me/5534993210534"
                 target="_blank"
                 onClick={() => setIsOpen(false)}
                 className="px-4 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl transition-colors font-bold text-center mt-2"

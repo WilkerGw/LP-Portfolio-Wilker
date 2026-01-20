@@ -84,73 +84,120 @@ const Hero = () => {
 
 
           {/* Visual Composition (Desktop Only) */}
-          <div className="hidden lg:block flex-1 relative w-full h-full min-h-[500px]">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px]">
+          <div className="hidden lg:block flex-1 relative w-full h-full min-h-[500px] perspective-1000">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[550px] h-[400px] transform rotate-y-[-5deg] rotate-x-[2deg] transition-transform duration-500 hover:rotate-0">
 
-              {/* Main Code Window */}
-              <div className="relative glass-card rounded-2xl p-6 border border-white/10 bg-[#0a0a0a]/80 backdrop-blur-xl shadow-2xl animate-float">
-                {/* Header Dots */}
-                <div className="flex gap-2 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
+              {/* Laptop Composition */}
+              <div className="absolute top-0 left-0 w-[440px] animate-float z-10 filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                {/* Screen Frame (Metallic) */}
+                <div className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-t-2xl p-[2px] shadow-2xl relative">
+                  {/* Camera */}
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-black/80 z-20 shadow-[0_0_2px_rgba(255,255,255,0.2)]"></div>
+
+                  {/* Inner Screen Bezel */}
+                  <div className="bg-black rounded-t-xl p-[2px]">
+                    {/* Display Area (OLED Black) */}
+                    <div className="bg-[#030303] rounded-t-lg overflow-hidden h-[270px] relative border border-white/5 shadow-inner group">
+
+                      {/* Ambient Glow */}
+                      <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] opacity-5 rotate-180 animate-spin-slow pointer-events-none"></div>
+
+                      {/* Mock Browser Header */}
+                      <div className="w-full h-8 bg-[#0a0a0a] flex items-center px-4 space-x-2 border-b border-white/5 backdrop-blur-md">
+                        <div className="flex space-x-1.5">
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] shadow-sm"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] shadow-sm"></div>
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#27C93F] shadow-sm"></div>
+                        </div>
+                        <div className="ml-4 w-3/5 h-4 bg-[#1a1a1a] rounded-md border border-white/5 flex items-center px-2">
+                          <div className="w-2 h-2 rounded-full bg-primary/20"></div>
+                        </div>
+                      </div>
+
+                      {/* Screen Content - Dashboard Style */}
+                      <div className="p-6 relative">
+                        {/* Header Area */}
+                        <div className="flex items-start space-x-6 mb-8">
+                          <div className="w-1/3 space-y-3">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-primary/20 to-secondary/10 border border-white/10 flex items-center justify-center">
+                              <div className="w-6 h-6 rounded-md bg-primary/40"></div>
+                            </div>
+                            <div className="w-3/4 h-2 bg-white/20 rounded-full"></div>
+                            <div className="w-1/2 h-2 bg-white/10 rounded-full"></div>
+                          </div>
+
+                          {/* Chart Area */}
+                          <div className="flex-1 h-24 rounded-xl bg-white/5 border border-white/5 p-3 relative overflow-hidden">
+                            <div className="absolute bottom-0 left-0 w-full h-12 bg-linear-to-t from-primary/10 to-transparent"></div>
+                            <div className="absolute bottom-3 left-3 w-[calc(100%-24px)] h-[1px] bg-white/10"></div>
+                            {/* Simple SVG Chart Line */}
+                            <div className="absolute bottom-3 left-3 w-[calc(100%-24px)] h-12">
+                              <svg className="w-full h-full overflow-visible">
+                                <path d="M0,48 C20,40 40,45 60,30 C80,15 100,25 120,10 C140,0 160,20 180,48" fill="none" stroke="url(#lineGradient)" strokeWidth="2" />
+                                <defs>
+                                  <linearGradient id="lineGradient" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stopColor="#8fce34" />
+                                    <stop offset="100%" stopColor="#0a6435" />
+                                  </linearGradient>
+                                </defs>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Grid Cards */}
+                        <div className="grid grid-cols-3 gap-3">
+                          {[1, 2, 3].map((i) => (
+                            <div key={i} className="h-16 bg-[#111] rounded-lg border border-white/5 p-3 flex flex-col justify-between group-hover:border-primary/20 transition-colors duration-500">
+                              <div className="w-4 h-4 rounded bg-white/10"></div>
+                              <div className="w-2/3 h-1.5 bg-white/10 rounded-full"></div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Screen Reflection */}
+                        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent pointer-events-none" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                {/* Code Lines */}
-                <div className="space-y-3 font-mono text-sm">
-                  <div className="flex gap-3">
-                    <span className="text-pink-500">const</span>
-                    <span className="text-blue-400">Developer</span>
-                    <span className="text-white">=</span>
-                    <span className="text-white">{'{'}</span>
-                  </div>
-                  <div className="pl-6 flex gap-3">
-                    <span className="text-white">name:</span>
-                    <span className="text-green-400">'Wilker Martins'</span>,
-                  </div>
-                  <div className="pl-6 flex gap-3">
-                    <span className="text-white">role:</span>
-                    <span className="text-green-400">'Full Stack'</span>,
-                  </div>
-                  <div className="pl-6 flex gap-3">
-                    <span className="text-white">skills:</span>
-                    <span className="text-yellow-300">['Next.js', 'React', 'AI']</span>
-                  </div>
-                  <div className="text-white">{'}'};</div>
-
-                  <div className="mt-6 flex gap-3">
-                    <span className="text-purple-400">await</span>
-                    <span className="text-blue-400">Developer</span>.
-                    <span className="text-yellow-200">deploy</span>(
-                    <span className="text-green-400">'Awesome_Project'</span>
-                    );
-                  </div>
+                {/* Laptop Base */}
+                <div className="bg-gradient-to-b from-gray-800 to-[#111] h-3.5 w-[480px] -ml-5 rounded-b-xl shadow-[0_25px_60px_-12px_rgba(0,0,0,0.6)] relative border-t border-black/80 flex justify-center">
+                  <div className="w-24 h-1.5 bg-white/10 rounded-b-md backdrop-blur-sm"></div>
                 </div>
-
-                {/* Glow Effect behind window */}
-                <div className="absolute -inset-1 bg-linear-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl -z-10" />
               </div>
 
-              {/* Floating Stats Card */}
-              <div className="absolute -bottom-12 -right-12 glass-panel p-5 rounded-2xl border border-white/10 bg-dark-surface/90 shadow-2xl animate-float-delayed">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+              {/* Smartphone Composition (Titanium Style) */}
+              <div className="absolute bottom-[-10px] right-[-10px] w-[110px] h-[220px] rounded-[2.5rem] p-[3px] bg-gradient-to-b from-gray-400 via-gray-600 to-gray-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-float-delayed z-20 transform rotate-[-5deg]">
+                {/* Phone Bezel */}
+                <div className="w-full h-full bg-black rounded-[2.3rem] overflow-hidden relative border-[3px] border-black">
+                  {/* Dynamic Island */}
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[30%] h-5 bg-black rounded-full z-30 flex items-center justify-center space-x-1">
+                    <div className="w-8 h-3 rounded-full bg-[#1a1a1a] flex items-center justify-end px-1">
+                      <div className="w-1 h-1 rounded-full bg-blue-500/50"></div>
+                    </div>
                   </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white">100%</div>
-                    <div className="text-sm text-gray-400">Performance</div>
+
+                  {/* Mobile Screen */}
+                  <div className="w-full h-full bg-[#050505] relative pt-10 px-3">
+                    {/* App Grid */}
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-white/5 flex items-center justify-center">
+                        <div className="w-6 h-6 rounded-lg bg-primary/40 text-primary flex items-center justify-center font-bold text-xs">A</div>
+                      </div>
+                      <div className="aspect-square rounded-2xl bg-[#111] border border-white/5"></div>
+                      <div className="aspect-square rounded-2xl bg-[#111] border border-white/5"></div>
+                      <div className="aspect-square rounded-2xl bg-[#111] border border-white/5"></div>
+                    </div>
                   </div>
+
+                  {/* Glass Reflection */}
+                  <div className="absolute inset-0 bg-linear-to-bl from-white/10 via-transparent to-transparent pointer-events-none rounded-[2.3rem]" />
                 </div>
               </div>
 
-              {/* Decorative Icons */}
-              <div className="absolute -top-10 -right-10 w-16 h-16 glass-panel rounded-2xl flex items-center justify-center animate-float-delayed shadow-lg delay-75">
-                <svg className="w-8 h-8 text-[#61DAFB]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2.2c5.41 0 9.8 4.39 9.8 9.8s-4.39 9.8-9.8 9.8-9.8-4.39-9.8-9.8 4.39-9.8 9.8-9.8zm0 7.6c-1.21 0-2.2.99-2.2 2.2s.99 2.2 2.2 2.2 2.2-.99 2.2-2.2-.99-2.2-2.2-2.2z" /></svg>
-              </div>
-
+              {/* Background ambient lighting */}
+              <div className="absolute top-10 right-20 w-32 h-32 bg-primary/30 rounded-full blur-[80px] -z-10 animate-pulse"></div>
             </div>
           </div>
         </div>
