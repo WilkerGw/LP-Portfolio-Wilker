@@ -30,14 +30,13 @@ const Hero = () => {
 
             <h1 className="text-4xl md:text-6xl font-heading font-bold leading-tight mb-6 animate-slide-up">
               Wilker Martins <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#8fce34] via-[#0a6435] to-[#003424] bg-[length:200%_auto] animate-gradient">
                 Desenvolvedor Web
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed animate-slide-up delay-200">
               Desenvolvedor Web & Especialista em criação de conteúdo com IA.
-              Crio soluções digitais escaláveis que impulsionam negócios e otimizam processos.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-slide-up delay-300">
@@ -84,6 +83,76 @@ const Hero = () => {
           </div>
 
 
+          {/* Visual Composition (Desktop Only) */}
+          <div className="hidden lg:block flex-1 relative w-full h-full min-h-[500px]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px]">
+
+              {/* Main Code Window */}
+              <div className="relative glass-card rounded-2xl p-6 border border-white/10 bg-[#0a0a0a]/80 backdrop-blur-xl shadow-2xl animate-float">
+                {/* Header Dots */}
+                <div className="flex gap-2 mb-6">
+                  <div className="w-3 h-3 rounded-full bg-red-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                </div>
+
+                {/* Code Lines */}
+                <div className="space-y-3 font-mono text-sm">
+                  <div className="flex gap-3">
+                    <span className="text-pink-500">const</span>
+                    <span className="text-blue-400">Developer</span>
+                    <span className="text-white">=</span>
+                    <span className="text-white">{'{'}</span>
+                  </div>
+                  <div className="pl-6 flex gap-3">
+                    <span className="text-white">name:</span>
+                    <span className="text-green-400">'Wilker Martins'</span>,
+                  </div>
+                  <div className="pl-6 flex gap-3">
+                    <span className="text-white">role:</span>
+                    <span className="text-green-400">'Full Stack'</span>,
+                  </div>
+                  <div className="pl-6 flex gap-3">
+                    <span className="text-white">skills:</span>
+                    <span className="text-yellow-300">['Next.js', 'React', 'AI']</span>
+                  </div>
+                  <div className="text-white">{'}'};</div>
+
+                  <div className="mt-6 flex gap-3">
+                    <span className="text-purple-400">await</span>
+                    <span className="text-blue-400">Developer</span>.
+                    <span className="text-yellow-200">deploy</span>(
+                    <span className="text-green-400">'Awesome_Project'</span>
+                    );
+                  </div>
+                </div>
+
+                {/* Glow Effect behind window */}
+                <div className="absolute -inset-1 bg-linear-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl -z-10" />
+              </div>
+
+              {/* Floating Stats Card */}
+              <div className="absolute -bottom-12 -right-12 glass-panel p-5 rounded-2xl border border-white/10 bg-dark-surface/90 shadow-2xl animate-float-delayed">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">100%</div>
+                    <div className="text-sm text-gray-400">Performance</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Icons */}
+              <div className="absolute -top-10 -right-10 w-16 h-16 glass-panel rounded-2xl flex items-center justify-center animate-float-delayed shadow-lg delay-75">
+                <svg className="w-8 h-8 text-[#61DAFB]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 2.2c5.41 0 9.8 4.39 9.8 9.8s-4.39 9.8-9.8 9.8-9.8-4.39-9.8-9.8 4.39-9.8 9.8-9.8zm0 7.6c-1.21 0-2.2.99-2.2 2.2s.99 2.2 2.2 2.2 2.2-.99 2.2-2.2-.99-2.2-2.2-2.2z" /></svg>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
 

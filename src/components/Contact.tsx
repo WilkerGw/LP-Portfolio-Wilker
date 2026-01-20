@@ -51,7 +51,7 @@ const Contact = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
-            Vamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Conversar?</span>
+            Vamos <span className="text-transparent bg-clip-text bg-linear-to-r from-[#8fce34] via-[#0a6435] to-[#003424]">Conversar?</span>
           </h2>
 
         </div>
@@ -179,7 +179,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full py-4 px-8 bg-gradient-to-r from-primary to-secondary text-dark font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-300"
+                  className="w-full py-4 px-8 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-300"
                 >
                   Enviar Mensagem
                 </button>

@@ -30,9 +30,6 @@ const Navbar = () => {
                 className="object-contain"
               />
             </div>
-            <span className="ml-3 font-heading font-bold text-xl tracking-tight text-white group-hover:text-primary transition-colors">
-              Wilker<span className="text-primary">.dev</span>
-            </span>
           </Link>
 
           {/* Desktop Menu */}
@@ -50,7 +47,7 @@ const Navbar = () => {
             <Link
               href="https://wa.me/5534993210534"
               target="_blank"
-              className="ml-4 px-5 py-2 bg-primary hover:bg-primary-dark text-dark font-bold text-sm rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+              className="ml-4 px-5 py-2 bg-white/5 hover:bg-white/10 text-white font-medium text-sm rounded-xl border border-white/10 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
             >
               Vamos Conversar
             </Link>
@@ -91,7 +88,7 @@ const Navbar = () => {
                 href="https://wa.me/5561992592289"
                 target="_blank"
                 onClick={() => setIsOpen(false)}
-                className="px-4 py-3 bg-primary/10 text-primary hover:bg-primary/20 rounded-xl transition-colors font-bold text-center mt-2"
+                className="px-4 py-3 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl transition-colors font-bold text-center mt-2"
               >
                 Vamos Conversar
               </Link>

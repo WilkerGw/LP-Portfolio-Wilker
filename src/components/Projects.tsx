@@ -144,7 +144,7 @@ const Projects = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
-            Projetos Web em <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Destaque</span>
+            Projetos Web em <span className="text-transparent bg-clip-text bg-linear-to-r from-[#8fce34] via-[#0a6435] to-[#003424]">Destaque</span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -189,7 +189,7 @@ const Projects = () => {
                         <Link
                           href={project.liveUrl}
                           target="_blank"
-                          className="px-8 py-3 bg-primary hover:bg-primary-dark text-dark font-bold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+                          className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
                         >
                           Ver Projeto
                         </Link>
