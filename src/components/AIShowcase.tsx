@@ -217,7 +217,7 @@ const AIShowcase = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-            Galeria <span className="bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 text-transparent bg-clip-text">IA Generativa</span>
+            Galeria <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">IA Generativa</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Videos, imagens, narração e muito mais, tudo gerado por IA.

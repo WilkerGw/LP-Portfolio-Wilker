@@ -2,19 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navItems = [
     { href: "#projects", label: "Projetos" },
@@ -25,17 +17,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-4" : "py-6"
-        }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4">
       <div className="container mx-auto px-4">
-        <div
-          className={`mx-auto max-w-5xl transition-all duration-500 rounded-2xl px-6 py-3 flex justify-between items-center ${scrolled
-            ? "bg-dark/80 backdrop-blur-xl border border-white/5 shadow-2xl shadow-primary/5"
-            : "bg-transparent border border-transparent"
-            }`}
-        >
+        <div className="mx-auto max-w-5xl transition-all duration-500 rounded-2xl px-6 py-3 flex justify-between items-center bg-dark/80 backdrop-blur-xl border border-white/5 shadow-2xl shadow-primary/5">
           {/* Logo */}
           <Link href="#" className="flex items-center group">
             <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">

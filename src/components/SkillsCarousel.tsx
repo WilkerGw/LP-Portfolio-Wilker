@@ -28,8 +28,8 @@ const SkillsCarousel = () => {
   const extendedSkills = [...skillsIcons, ...skillsIcons];
 
   return (
-    <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_svg]:h-10 [&_svg]:w-10 animate-infinite-scroll py-6">
+    <div className="w-full inline-flex flex-nowrap overflow-hidden bg-transparent">
+      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_svg]:h-10 [&_svg]:w-10 animate-infinite-scroll">
         {extendedSkills.map((skill, index) => (
           <li key={index} className="flex flex-col items-center text-gray-500 hover:text-primary transition-colors duration-300 group cursor-default">
             <div className="transform group-hover:scale-110 transition-transform duration-300">

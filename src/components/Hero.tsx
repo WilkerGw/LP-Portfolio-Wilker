@@ -7,18 +7,18 @@ import SkillsCarousel from "./SkillsCarousel";
 
 const Hero = () => {
   return (
-    <section className="relative flex items-center py-24 md:py-32 lg:min-h-screen overflow-hidden">
+    <section className="relative flex items-center pt-28 pb-32 lg:h-screen overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0" />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full translate-y-1/2 -translate-x-1/2" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 animate-pulse" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 animate-pulse delay-1000" />
 
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-4 animate-fade-in">
               <span className="relative flex h-2 w-2 mr-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -28,29 +28,24 @@ const Hero = () => {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-heading font-bold leading-tight mb-6 animate-slide-up">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold leading-tight mb-6 animate-slide-up">
               Wilker Martins <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient">
                 Desenvolvedor Web
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-slide-up delay-200">
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed animate-slide-up delay-200">
               Desenvolvedor Web & Especialista em criação de conteúdo com IA.
               Crio soluções digitais escaláveis que impulsionam negócios e otimizam processos.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-slide-up delay-300">
-              <Link
-                href="#contact"
-                className="px-8 py-4 bg-primary hover:bg-primary-dark text-dark font-bold rounded-xl transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/25 w-full sm:w-auto"
-              >
-                Iniciar Projeto
-              </Link>
+
 
               <Link
                 href="#ai-showcase"
-                className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all hover:scale-105 w-full sm:w-auto flex items-center justify-center gap-2"
+                className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl border border-white/10 transition-all hover:scale-105 w-full sm:w-auto flex items-center justify-center gap-2"
               >
                 Ver Portfólio
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +55,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="mb-10 mt-5 flex items-center justify-center lg:justify-start gap-6 animate-fade-in delay-500">
+            <div className="mb-0 mt-6 flex items-center justify-center lg:justify-start gap-6 animate-fade-in delay-500">
               {[
                 { icon: "github", href: "https://github.com/WilkerGw", label: "GitHub" },
                 { icon: "linkedin", href: "https://www.linkedin.com/in/wilker-martins-22238a370/", label: "LinkedIn" },
@@ -92,8 +87,28 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Dynamic Divider */}
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-0 pointer-events-none">
+        <svg
+          className="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px]"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className="fill-black opacity-0"
+          ></path>
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="fill-black"
+          ></path>
+        </svg>
+      </div>
+
       {/* Bottom Carousel */}
-      <div className="absolute bottom-0 left-0 w-full pt-20 pb-8">
+      <div className="absolute bottom-0 left-0 w-full pb-6 z-10">
         <SkillsCarousel />
       </div>
 

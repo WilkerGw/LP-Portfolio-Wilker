@@ -26,7 +26,7 @@ export default function RootLayout({
       >
         <div className="fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-dark/20 via-dark to-dark pointer-events-none" />
         <Navbar />
-        <main className="pt-20 min-h-screen">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
 
         {/* Tags do Google */}
