@@ -9,6 +9,7 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    honeypot: "",
   });
 
   const handleChange = (
@@ -22,6 +23,10 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (formData.honeypot) {
+      return;
+    }
 
     const { name, email, message } = formData;
 
@@ -158,6 +163,19 @@ const Contact = () => {
                     className="w-full px-6 py-4 bg-dark-lighter border border-white/5 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all duration-300"
                     placeholder="seu@email.com"
                     required
+                  />
+                </div>
+
+                <div style={{ display: 'none' }}>
+                  <label htmlFor="honeypot">Não preencha este campo</label>
+                  <input
+                    type="text"
+                    id="honeypot"
+                    name="honeypot"
+                    value={formData.honeypot}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
                   />
                 </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import { FaVolumeMute, FaVolumeUp } from "react-icons/fa";
 
 const LazyVideo = ({ src }: { src: string }) => {
@@ -202,12 +203,15 @@ const AIShowcase = () => {
                   playsInline
                 />
               ) : (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={selectedMedia.src}
-                  alt="Expanded view"
-                  className="max-h-[80vh] w-auto mx-auto object-contain"
-                />
+                <div className="relative h-[80vh] w-[80vw]">
+                  <Image
+                    src={selectedMedia.src}
+                    alt="Expanded view"
+                    fill
+                    className="object-contain"
+                    sizes="80vw"
+                  />
+                </div>
               )}
             </div>
           </div>
@@ -249,13 +253,12 @@ const AIShowcase = () => {
               className="group relative rounded-xl overflow-hidden aspect-[4/5] bg-gray-900 border border-gray-800 transform translate-z-0 cursor-pointer"
               onClick={() => openLightbox('image', item.src)}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={item.src}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-                decoding="async"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
 
             </div>
@@ -271,13 +274,12 @@ const AIShowcase = () => {
               className="group relative rounded-xl overflow-hidden aspect-[9/16] bg-gray-900 border border-gray-800 transform translate-z-0 cursor-pointer"
               onClick={() => openLightbox('image', item.src)}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={item.src}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-                decoding="async"
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+                sizes="(max-width: 768px) 50vw, 25vw"
               />
 
             </div>
