@@ -203,8 +203,9 @@ const Hero = () => {
         </div>
       </div>
 
+
       {/* Dynamic Divider */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-0 pointer-events-none">
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 z-0 pointer-events-none">
         <svg
           className="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px]"
           data-name="Layer 1"

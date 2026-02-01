@@ -1,0 +1,89 @@
+"use client";
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+// 1. Definição do tipo para os nossos itens
+interface ServiceItem {
+    id: number;
+    title: string;
+    description: string;
+    buttonText: string;
+    imageUrl: string;
+}
+
+const services: ServiceItem[] = [
+    { id: 1, title: 'Vídeos', description: 'Vídeos promocionais gerados por IA.', buttonText: 'Ver seção', imageUrl: '/images/capa-videos.webp' },
+    { id: 2, title: 'Posts', description: 'Imagens no formato 4:5 para feed geradas por IA.', buttonText: 'Ver seção', imageUrl: '/images/acompanhe-status.webp' },
+    { id: 3, title: 'Stories', description: 'Imagens no formato 9:16 para stories geradas por IA.', buttonText: 'Ver seção', imageUrl: '/images/story2.webp' },
+    // { id: 4, title: 'Automações', description: 'Automações para redes sociais geradas por IA.', buttonText: 'Ver seção', imageUrl: './images/capa-automacao.webp' },
+];
+
+export const InteractiveSection: React.FC = () => {
+    // Estado para controlar qual card está ativo (hover)
+    // Começamos com o primeiro (id: 1) ou null se preferir tudo fechado
+    const [activeId, setActiveId] = useState<number | null>(1);
+
+    return (
+        <section className="flex h-[600px] w-full bg-dark border-y border-white/5 overflow-hidden font-sans relative">
+            {/* Background Effects */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px] pointer-events-none" />
+
+            {/* Lado esquerdo: Texto fixo */}
+            <div className="w-1/4 flex items-center justify-center p-8 bg-dark-surface border-r border-white/5 z-10 relative">
+                <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-white leading-tight">
+                    Galeria <br />
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
+                        IA Generativa
+                    </span>
+                </h2>
+            </div>
+
+            {/* Lado direito: Cards interativos */}
+            <div className="flex flex-1 z-10">
+                {services.map((service) => (
+                    <div
+                        key={service.id}
+                        onMouseEnter={() => setActiveId(service.id)}
+                        // A mágica acontece aqui: se estiver ativo, ganha flex-[3], se não, flex-1
+                        className={`relative h-full transition-all duration-500 ease-in-out cursor-pointer overflow-hidden border-l border-white/5
+              ${activeId === service.id ? 'flex-[3]' : 'flex-1'}`}
+                    >
+                        {/* Imagem de Fundo */}
+                        <div
+                            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
+                            style={{ backgroundImage: `url(${service.imageUrl})` }}
+                        >
+                            {/* Overlay escuro para ler o texto melhor */}
+                            <div className={`absolute inset-0 transition-colors duration-500 ${activeId === service.id ? 'bg-black/40' : 'bg-black/60'}`} />
+                        </div>
+
+                        {/* Conteúdo do Card */}
+                        <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                            {/* Título Vertical (aparece quando recolhido) ou Horizontal */}
+                            <h3 className={`text-2xl font-bold font-heading transition-all duration-500 ${activeId === service.id ? 'mb-4 translate-y-0 text-white' : 'mb-10 -rotate-90 origin-left whitespace-nowrap text-gray-300'}`}>
+                                {service.title}
+                            </h3>
+
+                            {/* Descrição e Botão (SÓ APARECEM NO HOVER) */}
+                            <div className={`transition-all duration-500 delay-100 ${activeId === service.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+                                <p className="mb-6 text-sm leading-relaxed text-gray-200">
+                                    {service.description}
+                                </p>
+                                <Link
+                                    href="/ai-generativa"
+                                    className="px-8 py-2 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20 inline-block text-center"
+                                >
+                                    {service.buttonText}
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                ))
+                }
+            </div>
+        </section >
+    );
+};
+
+export default InteractiveSection;
