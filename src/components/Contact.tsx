@@ -1,10 +1,42 @@
 "use client";
 
 // src/components/Contact.tsx
-import React from "react";
+import React, { useState } from "react";
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    honeypot: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (formData.honeypot) {
+      return;
+    }
+
+    const { name, email, message } = formData;
+
+    const text = `*Novo Contato via Site*\n\n*Nome:* ${name}\n*Email:* ${email}\n*Mensagem:* ${message}`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/5534993210534?text=${encodedText}`;
+
+    window.open(whatsappUrl, '_blank');
+  };
   return (
     <section
       id="contact"
@@ -71,10 +103,82 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            {/* Contact Form */}
+            <div className="bg-dark-surface border border-white/5 rounded-3xl p-8 lg:p-10">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                    Nome Completo
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-6 py-4 bg-dark-lighter border border-white/5 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all duration-300"
+                    placeholder="Como devo te chamar?"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-6 py-4 bg-dark-lighter border border-white/5 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all duration-300"
+                    placeholder="seu@email.com"
+                    required
+                  />
+                </div>
+
+                <div style={{ display: 'none' }}>
+                  <label htmlFor="honeypot">Não preencha este campo</label>
+                  <input
+                    type="text"
+                    id="honeypot"
+                    name="honeypot"
+                    value={formData.honeypot}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                    Mensagem
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-6 py-4 bg-dark-lighter border border-white/5 rounded-xl text-white placeholder-gray-600 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all duration-300 resize-none"
+                    placeholder="Conte-me sobre seu projeto..."
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-4 px-8 bg-white/5 hover:bg-white/10 text-white border border-white/10 font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-primary/20 hover:scale-[1.02] transition-all duration-300"
+                >
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div >
+        </div >
+      </div >
+    </section >
   );
 };
 
