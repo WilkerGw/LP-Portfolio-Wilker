@@ -50,7 +50,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   repoUrl,
 }) => {
   return (
-    <div className="group relative bg-dark-surface border border-white/5 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col h-full">
+    <div className="group relative liquid-card overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 flex flex-col h-full">
       {/* Image Container */}
       <div className="relative aspect-video overflow-hidden bg-dark-lighter">
         <Image
@@ -66,9 +66,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Link
               href={liveUrl}
               target="_blank"
-              className="px-6 py-2 bg-primary text-dark font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:scale-105"
+              className="btn-liquid px-6 py-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300"
             >
-              Ver Site
+              <span className="relative z-10 font-bold">Ver Site</span>
             </Link>
           )}
           {repoUrl && (
@@ -84,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col grow">
         <div className="flex items-center gap-2 mb-3">
           {tags.slice(0, 3).map((tag, i) => (
             <span key={i} className="text-xs font-medium px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20">
@@ -102,7 +102,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {title}
         </h3>
 
-        <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
+        <p className="text-gray-400 text-sm leading-relaxed mb-6 grow line-clamp-3">
           {description}
         </p>
 

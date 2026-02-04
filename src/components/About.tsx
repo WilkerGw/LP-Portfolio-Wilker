@@ -35,13 +35,13 @@ const About = () => {
 
           {/* Content Side */}
           <div className="w-full lg:w-1/2">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full liquid-glass mb-6">
               <span className="text-primary text-sm font-bold tracking-wider uppercase">Sobre Mim</span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-white">
               Desenvolvedor apaixonado por <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
                 Inovação e Tecnologia
               </span>
             </h2>
@@ -64,7 +64,7 @@ const About = () => {
                 { number: "100%", label: "Satisfação" },
                 { number: "24/7", label: "Suporte Dedicado" },
               ].map((stat, index) => (
-                <div key={index} className="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-primary/30 transition-colors group">
+                <div key={index} className="p-4 liquid-glass rounded-xl hover:border-primary/30 transition-colors group">
                   <h3 className="text-2xl font-bold text-white group-hover:text-primary transition-colors">{stat.number}</h3>
                   <p className="text-sm text-gray-500">{stat.label}</p>
                 </div>

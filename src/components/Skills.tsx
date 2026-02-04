@@ -86,12 +86,12 @@ const Skills = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full liquid-glass mb-6">
             <span className="text-primary text-sm font-bold tracking-wider uppercase">Expertise</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
-            Minhas <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Habilidades</span>
+            Minhas <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">Habilidades</span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -104,12 +104,12 @@ const Skills = () => {
           {skillsData.map((skillCategory, index) => (
             <div
               key={index}
-              className="group relative bg-dark-surface border border-white/5 p-8 rounded-2xl hover:border-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5"
+              className="group relative liquid-card p-8 rounded-2xl hover:border-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5"
             >
               {/* Category Header */}
               <div className="text-center mb-8 relative">
                 <div className="absolute inset-x-0 top-1/2 h-px bg-white/5 -z-10" />
-                <h3 className="inline-block px-4 bg-dark-surface text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+                <h3 className="inline-block px-4 bg-transparent backdrop-blur-sm rounded-full text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 border border-white/5">
                   {skillCategory.category}
                 </h3>
               </div>
@@ -143,7 +143,7 @@ const Skills = () => {
 
         {/* Additional Info */}
         <div className="mt-20 text-center">
-          <div className="inline-block bg-dark-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-white/5 max-w-4xl mx-auto">
+          <div className="inline-block liquid-glass rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Aprendizado Contínuo
             </h3>

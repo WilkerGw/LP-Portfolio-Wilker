@@ -139,8 +139,8 @@ const Projects = () => {
             <div className="container mx-auto px-4 relative z-10">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-                        <span className="text-primary text-sm font-bold tracking-wider uppercase">Portfolio</span>
+                    <div className="inline-flex items-center px-4 py-2 rounded-full liquid-glass mb-6">
+                        <span className="text-gray-300 text-sm font-bold tracking-wider uppercase">Portfolio</span>
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
@@ -157,7 +157,7 @@ const Projects = () => {
                     {projectsData
                         .filter((project) => project.featured)
                         .map((project, index) => (
-                            <div key={index} className="relative group rounded-3xl overflow-hidden border border-white/10 bg-dark-surface/50 backdrop-blur-xl">
+                            <div key={index} className="relative group rounded-3xl overflow-hidden liquid-glass">
                                 <div className="grid lg:grid-cols-2 gap-0">
                                     <div className="p-8 lg:p-12 flex flex-col justify-center">
                                         <div className="inline-flex items-center gap-2 text-primary font-bold mb-4">
@@ -189,16 +189,16 @@ const Projects = () => {
                                                 <Link
                                                     href={project.liveUrl}
                                                     target="_blank"
-                                                    className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
+                                                    className="btn-liquid px-8 py-3 w-max"
                                                 >
-                                                    Ver Projeto
+                                                    <span className="relative z-10 font-bold">Ver Projeto</span>
                                                 </Link>
                                             )}
                                             {project.repoUrl && (
                                                 <Link
                                                     href={project.repoUrl}
                                                     target="_blank"
-                                                    className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl border border-white/10 transition-all hover:scale-105"
+                                                    className="px-8 py-3 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full border border-white/10 transition-all hover:scale-105"
                                                 >
                                                     Ver Código
                                                 </Link>

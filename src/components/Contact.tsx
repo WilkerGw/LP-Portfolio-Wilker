@@ -16,9 +16,9 @@ const Contact = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
-            <span className="text-primary text-sm font-bold tracking-wider uppercase">Contato</span>
+        <div className="text-center mb-20 animate-slide-up">
+          <div className="inline-flex items-center px-4 py-2 rounded-full liquid-glass mb-6">
+            <span className="text-gray-300 text-sm font-bold tracking-wider uppercase">Contato</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
@@ -27,10 +27,10 @@ const Contact = () => {
 
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-slide-up delay-200">
           {/* Contact Info */}
-          <div className="bg-dark-surface border border-white/5 rounded-3xl p-8 lg:p-10 relative overflow-hidden group">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="liquid-glass rounded-3xl p-8 lg:p-10 relative overflow-hidden group">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-white/5" />
 
             <div className="text-center mb-10 relative z-10">
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -42,8 +42,8 @@ const Contact = () => {
             </div>
 
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 md:gap-4 relative z-10">
-              <a href="mailto:wil.dev@hotmail.com" className="flex items-center gap-4 group/item w-full md:w-auto">
-                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-2xl text-primary group-hover/item:bg-primary group-hover/item:text-dark transition-all duration-300">
+              <a href="mailto:wil.dev@hotmail.com" className="flex items-center gap-4 group/item w-full md:w-auto p-4 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                <div className="w-14 h-14 liquid-glass rounded-2xl flex items-center justify-center text-2xl text-primary group-hover/item:scale-110 transition-all duration-300 shadow-lg">
                   <FaEnvelope />
                 </div>
                 <div>
@@ -52,8 +52,8 @@ const Contact = () => {
                 </div>
               </a>
 
-              <a href="https://wa.me/5534993210534" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group/item w-full md:w-auto">
-                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-2xl text-primary group-hover/item:bg-primary group-hover/item:text-dark transition-all duration-300">
+              <a href="https://wa.me/5534993210534" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group/item w-full md:w-auto p-4 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                <div className="w-14 h-14 liquid-glass rounded-2xl flex items-center justify-center text-2xl text-primary group-hover/item:scale-110 transition-all duration-300 shadow-lg">
                   <FaWhatsapp />
                 </div>
                 <div>
@@ -62,8 +62,8 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 group/item w-full md:w-auto">
-                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-2xl text-primary group-hover/item:bg-primary group-hover/item:text-dark transition-all duration-300">
+              <div className="flex items-center gap-4 group/item w-full md:w-auto p-4 rounded-2xl hover:bg-white/5 transition-all duration-300">
+                <div className="w-14 h-14 liquid-glass rounded-2xl flex items-center justify-center text-2xl text-primary group-hover/item:scale-110 transition-all duration-300 shadow-lg">
                   <FaMapMarkerAlt />
                 </div>
                 <div>

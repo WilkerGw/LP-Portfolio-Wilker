@@ -32,8 +32,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        heading: ['var(--font-outfit)', 'sans-serif'],
+        sans: ['var(--font-sora)', 'sans-serif'],
+        heading: ['var(--font-sora)', 'sans-serif'],
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
