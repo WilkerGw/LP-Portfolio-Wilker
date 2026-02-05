@@ -164,13 +164,12 @@ const AIShowcase = () => {
     );
 
     return (
-        <section id="ai-showcase" className="py-24 bg-black text-white relative overflow-hidden">
+        <section id="ai-showcase" className="section-base py-24 text-white">
             {/* Background Elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-                <div className="absolute top-[10%] left-[10%] w-96 h-96 rounded-full blur-3xl opacity-50"></div>
-                <div className="absolute top-[40%] right-[10%] w-96 h-96 rounded-full blur-3xl opacity-50"></div>
-                <div className="absolute bottom-[10%] left-[20%] w-96 h-96 rounded-full blur-3xl opacity-50"></div>
-            </div>
+            <div className="section-grid" />
+            <div className="absolute top-[10%] left-[10%] w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute top-[40%] right-[10%] w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute bottom-[10%] left-[20%] w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
 
             {/* Lightbox Modal */}
             {selectedMedia && (

@@ -19,6 +19,7 @@ import {
   SiMongodb,
   SiPostgresql,
   SiMysql,
+  SiSupabase,
   SiGimp,
   SiCanva,
 } from "react-icons/si";
@@ -38,6 +39,7 @@ const iconMap: { [key: string]: React.ReactElement } = {
   MongoDB: <SiMongodb title="MongoDB" />,
   PostgreSQL: <SiPostgresql title="PostgreSQL" />,
   MySQL: <SiMysql title="MySQL" />,
+  Supabase: <SiSupabase title="Supabase" />,
   Git: <FaGitAlt title="Git" />,
   GitHub: <FaGithub title="GitHub" />,
   Gemini: <FaBrain title="Gemini" />,
@@ -64,7 +66,7 @@ const skillsData = [
   },
   {
     category: "Bancos de Dados",
-    technologies: ["MongoDB", "PostgreSQL", "MySQL"],
+    technologies: ["MongoDB", "PostgreSQL", "MySQL", "Supabase"],
   },
   {
     category: "Ferramentas & Outros",
@@ -76,12 +78,11 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative py-16 md:py-24 bg-dark overflow-hidden"
+      className="section-base py-20 md:py-28"
     >
       {/* Background Elements */}
-      {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-px" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] -z-10" />
+      <div className="section-grid" />
+      <div className="section-glow-primary" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -99,43 +100,37 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Skills Grid - Compact Layout */}
+        <div className="space-y-8">
           {skillsData.map((skillCategory, index) => (
             <div
               key={index}
-              className="group relative liquid-card p-8 rounded-2xl hover:border-primary/30 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5"
+              className="group liquid-card p-6 md:p-8 rounded-2xl hover:border-primary/30 transition-all duration-300"
             >
               {/* Category Header */}
-              <div className="text-center mb-8 relative">
-                <div className="absolute inset-x-0 top-1/2 h-px bg-white/5 -z-10" />
-                <h3 className="inline-block px-4 bg-transparent backdrop-blur-sm rounded-full text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 border border-white/5">
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 whitespace-nowrap min-w-[160px]">
                   {skillCategory.category}
                 </h3>
-              </div>
 
-              {/* Technologies Grid */}
-              <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {skillCategory.technologies.map((tech, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center text-center group/tech"
-                  >
-                    <div className="relative w-12 h-12 flex items-center justify-center text-3xl text-gray-500 group-hover/tech:text-primary transition-all duration-300 group-hover/tech:scale-110 mb-3">
-                      <div className="absolute inset-0 bg-primary/10 rounded-xl opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300" />
-                      {iconMap[tech] || (
-                        <div className="w-10 h-10 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">
-                            {tech.charAt(0)}
-                          </span>
-                        </div>
-                      )}
+                {/* Technologies - Horizontal Flow */}
+                <div className="flex flex-wrap gap-3 md:gap-4">
+                  {skillCategory.technologies.map((tech, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-primary/10 rounded-xl border border-white/10 hover:border-primary/30 transition-all duration-300 group/tech cursor-default"
+                    >
+                      <span className="text-xl text-gray-400 group-hover/tech:text-primary transition-colors duration-300">
+                        {iconMap[tech] || (
+                          <span className="text-sm font-bold">{tech.charAt(0)}</span>
+                        )}
+                      </span>
+                      <span className="text-sm font-medium text-gray-300 group-hover/tech:text-white transition-colors duration-300">
+                        {tech}
+                      </span>
                     </div>
-                    <span className="text-xs font-medium text-gray-500 group-hover/tech:text-white transition-colors duration-300">
-                      {tech}
-                    </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           ))}
@@ -143,19 +138,40 @@ const Skills = () => {
 
         {/* Additional Info */}
         <div className="mt-20 text-center">
-          <div className="inline-block liquid-glass rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Aprendizado Contínuo
+          <div className="relative inline-block liquid-glass rounded-2xl p-8 md:p-12 max-w-4xl mx-auto overflow-hidden">
+            {/* Background Glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-primary/10 rounded-full blur-[80px] -z-10" />
+
+            {/* Icon */}
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+              </svg>
+            </div>
+
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Aprendizado <span className="text-primary">Contínuo</span>
             </h3>
-            <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-400 mb-8 leading-relaxed max-w-2xl mx-auto">
               A tecnologia evolui constantemente, e eu me mantenho atualizado
-              com as últimas tendências e melhores práticas do desenvolvimento
-              web.
+              com as últimas tendências e melhores práticas do desenvolvimento web.
             </p>
+
+            {/* Skills Tags */}
             <div className="flex flex-wrap justify-center gap-3">
-              {["UI/UX Design", "SEO", "Performance"].map((item, i) => (
-                <span key={i} className="px-4 py-2 bg-white/5 hover:bg-white/10 text-gray-300 text-sm rounded-lg border border-white/10 transition-colors cursor-default">
-                  {item}
+              {[
+                { name: "UI/UX Design", icon: "🎨" },
+                { name: "SEO", icon: "🔍" },
+                { name: "Performance", icon: "⚡" },
+                { name: "Acessibilidade", icon: "♿" },
+                { name: "Clean Code", icon: "✨" }
+              ].map((item, i) => (
+                <span
+                  key={i}
+                  className="group px-4 py-2 bg-white/5 hover:bg-primary/10 text-gray-300 hover:text-primary text-sm rounded-full border border-white/10 hover:border-primary/30 transition-all duration-300 cursor-default flex items-center gap-2"
+                >
+                  <span className="group-hover:scale-125 transition-transform duration-300">{item.icon}</span>
+                  {item.name}
                 </span>
               ))}
             </div>

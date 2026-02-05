@@ -37,6 +37,7 @@ const config: Config = {
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'infinite-scroll-fast': 'infinite-scroll 12s linear infinite',
         'fade-in': 'fade-in 0.8s ease-out',
         'slide-up': 'slide-up 0.8s ease-out',
         'float': 'float 3s ease-in-out infinite',

@@ -18,65 +18,83 @@ const Hero = () => {
 
           {/* Text Content */}
           <div className="flex-1 text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full liquid-glass mb-6 animate-fade-in">
-              <span className="relative flex h-2 w-2 mr-3">
+            {/* Badge */}
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in">
+              <span className="relative flex h-2 w-2 mr-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              <span className="text-gray-300 text-sm font-medium tracking-wide">
+              <span className="text-primary text-sm font-medium">
                 Disponível para novos projetos
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-heading font-bold leading-tight mb-6 animate-slide-up">
-              Wilker Martins <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#8fce34] via-[#0a6435] to-[#003424] bg-[length:200%_auto] animate-gradient">
+              <span className="text-white">Wilker Martins</span> <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary">
                 Desenvolvedor Web
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed animate-slide-up delay-200">
-              Desenvolvedor Web & Especialista em criação de conteúdo com IA.
+            <p className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto mb-8 leading-relaxed animate-slide-up delay-200">
+              Criando experiências digitais modernas com <span className="text-white font-medium">React</span>, <span className="text-white font-medium">Next.js</span> e <span className="text-white font-medium">IA Generativa</span>.
             </p>
 
-            <div className=" flex flex-col items-center">
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-slide-up delay-300">
+            <div className="flex flex-col items-center">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-300">
                 <Link
                   href="#ai-showcase"
-                  className="btn-liquid px-8 py-3 w-full sm:w-auto"
+                  className="btn-liquid px-8 py-3 w-full sm:w-auto group"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Ver Portfólio
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </span>
                 </Link>
+                <Link
+                  href="#contact"
+                  className="px-8 py-3 w-full sm:w-auto rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white font-medium transition-all duration-300 hover:border-primary/30"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                    Entre em Contato
+                  </span>
+                </Link>
               </div>
+
               {/* Social Links */}
-              <div className="mb-0 mt-6 flex items-center justify-center lg:justify-start gap-6 animate-fade-in delay-500">
+              <div className="mt-8 flex items-center justify-center gap-4 animate-fade-in delay-500">
                 {[
-                  { icon: "github", href: "https://github.com/WilkerGw", label: "GitHub" },
-                  { icon: "linkedin", href: "https://www.linkedin.com/in/wilker-martins-22238a370/", label: "LinkedIn" },
-                  { icon: "instagram", href: "https://www.instagram.com/dev.wilker", label: "Instagram" },
+                  {
+                    href: "https://github.com/WilkerGw",
+                    label: "GitHub",
+                    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.087 2.91.831.092-.646.349-1.086.635-1.337-2.22-.252-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.547 1.376.203 2.394.1 2.646.64.699 1.028 1.591 1.028 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" /></svg>
+                  },
+                  {
+                    href: "https://www.linkedin.com/in/wilker-martins-22238a370/",
+                    label: "LinkedIn",
+                    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" /></svg>
+                  },
+                  {
+                    href: "https://www.instagram.com/dev.wilker",
+                    label: "Instagram",
+                    icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" /><circle cx="17.5" cy="6.5" r="1.5" /></svg>
+                  },
                 ].map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-primary transition-colors transform hover:scale-110"
+                    className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/30 hover:bg-primary/10 transition-all duration-300"
                     aria-label={social.label}
                   >
-                    {social.icon === "github" && (
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></svg>
-                    )}
-                    {social.icon === "linkedin" && (
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                    )}
-                    {social.icon === "instagram" && (
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" /></svg>
-                    )}
+                    {social.icon}
                   </a>
                 ))}
               </div>

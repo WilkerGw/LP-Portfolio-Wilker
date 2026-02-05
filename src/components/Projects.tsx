@@ -129,12 +129,11 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="relative py-16 md:py-24 bg-dark overflow-hidden"
+            className="section-base py-20 md:py-28"
         >
             {/* Background Elements */}
-            {/* Background Elements */}
-            <div className="absolute top-0 right-0 w-1/3 h-full -z-10" />
-            <div className="absolute bottom-0 left-0 w-1/3 h-full -z-10" />
+            <div className="section-grid" />
+            <div className="section-glow-primary" />
 
             <div className="container mx-auto px-4 relative z-10">
                 {/* Header */}
